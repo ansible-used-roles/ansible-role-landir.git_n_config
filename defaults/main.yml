@@ -1,0 +1,49 @@
+---
+# defaults file for ansible-role-landir.git_n_config
+git_config_values:
+  - name: user.email
+    value: "{{ email_git }}"
+  - name: user.name
+    value: "{{ nome_git }}"
+  - name: credential.helper
+    value: store
+  - name: http.sslverify
+    value: false
+  - name: color.ui
+    value: true
+  - name: core.editor
+    value: /usr/bin/vim
+  - name: alias.changelog
+    value: log --oneline --abbrev-commit --no-merges
+  - name: alias.graph
+    value: log --graph --abbrev-commit --decorate --date=relative --format=form
+  - name: alias.unstage
+    value: reset HEAD --
+  - name: alias.uncommit
+    value: reset --soft HEAD~
+  - name: alias.rc
+    value: rebase --continue
+  - name: alias.rs
+    value: rebase --skip
+  - name: alias.ra
+    value: rebase --abort
+  - name: alias.sync
+    value: '!git tag -l | xargs git tag -d && git fetch -t'
+  - name: alias.preparepr
+    value: '!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD);git checkout ma'
+  - name: alias.updatepr
+    value: '!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD);git push --set-u'
+  - name: alias.openpr
+    value: '!f() { ORG=$(git remote get-url origin | cut -d : -f2 | cut -d / -f'
+  - name: pager.log
+    value: false
+  - name: pager.branch
+    value: false
+  - name: core.repositoryformatversion
+    value: 0
+  - name: core.filemode
+    value: true
+  - name: core.bare
+    value: false
+  - name: core.logallrefupdates
+    value: true

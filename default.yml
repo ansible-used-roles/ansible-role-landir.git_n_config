@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  gather_facts: true
+  roles:
+    - ansible-role-landir.git_n_config
+  vars:
+    - email_git: "landir@gmail.com"
+    - nome_git: "Landir"
