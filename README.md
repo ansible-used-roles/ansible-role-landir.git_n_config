@@ -2,7 +2,7 @@
 * Prerequisite:
   * bash sudo curl
 
-``` curl -sL https://raw.githubusercontent.com/ansible-used-roles/ansible-role-landir.fonts/main/scripts/quickinstall.sh | sudo bash ```
+``` curl -sL https://raw.githubusercontent.com/ansible-used-roles/ansible-role-landir.git_n_config/main/scripts/quickinstall.sh | sudo bash ```
 
 ====
 
